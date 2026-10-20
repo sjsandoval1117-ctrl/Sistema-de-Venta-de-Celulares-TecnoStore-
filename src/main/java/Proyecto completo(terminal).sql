@@ -75,3 +75,14 @@ INSERT INTO vendedor (nombre, codigo) VALUES
 ('Andrés Felipe Gómez', 'VEND004'),
 ('Laura Daniela Martínez', 'VEND005'),
 ('Camilo Esteban Rodríguez', 'VEND006');
+
+INSERT INTO pedido (cliente_id, vendedor_id, total) VALUES 
+(1, 1, 4700000.0),  
+(2, 2, 1975800.0),  
+(3, 1, 4999900.0);  
+
+INSERT INTO detalle_venta (pedido_id, celular_id, cantidad, subtotal) VALUES 
+(1, 2, 1, 3500000.0),  
+(1, 3, 1, 1200000.0),  
+(2, 4, 2, 1975800.0),  
+(3, 1, 1, 4999900.0);
