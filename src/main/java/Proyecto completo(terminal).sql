@@ -1,3 +1,4 @@
+
 DROP DATABASE IF EXISTS tecnostore_SaraSandoval;
 CREATE DATABASE tecnostore_SaraSandoval;
 USE tecnostore_SaraSandoval;
@@ -86,3 +87,30 @@ INSERT INTO detalle_venta (pedido_id, celular_id, cantidad, subtotal) VALUES
 (1, 3, 1, 1200000.0),  
 (2, 4, 2, 1975800.0),  
 (3, 1, 1, 4999900.0);
+
+SELECT * FROM categoria;
+SELECT * FROM celular;
+SELECT * FROM cliente;
+SELECT * FROM vendedor;
+SELECT * FROM pedido;
+SELECT * FROM detalle_venta;
+
+SELECT 
+    p.id AS pedido_id,
+    p.fecha,
+    c.nombre AS cliente,
+    v.nombre AS vendedor,
+    p.total
+FROM pedido p
+INNER JOIN cliente c ON p.cliente_id = c.id
+INNER JOIN vendedor v ON p.vendedor_id = v.id;
+
+SELECT 
+    dv.id AS detalle_id,
+    dv.pedido_id,
+    cel.marca,
+    cel.modelo,
+    dv.cantidad,
+    dv.subtotal
+FROM detalle_venta dv
+INNER JOIN celular cel ON dv.celular_id = cel.id;
