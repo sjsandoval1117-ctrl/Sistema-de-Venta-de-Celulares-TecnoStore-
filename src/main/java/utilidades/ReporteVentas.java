@@ -3,11 +3,11 @@ package utilidades;
 import modelo.Producto;
 import java.util.List;
 
-public class ReporteUtils {
+public class ReporteVentas {
 
     public static void generarCabeceraReporte() {
         System.out.println("==================================");
-        System.out.println("     REPORTE OFICIAL TECNOSTORE   ");
+        System.out.println("     REPORTE VENTAS   ");
         System.out.println("==================================");
     }
 

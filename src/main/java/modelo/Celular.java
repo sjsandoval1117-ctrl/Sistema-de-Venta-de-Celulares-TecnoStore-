@@ -7,7 +7,7 @@ public class Celular {
     private double precio;
     private int stock;
 
-    public Celular(int id, String marca, String modelo, double precio, int stock) {
+    public Celular(int id, String marca, String modelo, int stock, int aInt2, int aInt3, int aInt4) {
         this.id = id;
         this.marca = marca;
         this.modelo = modelo;

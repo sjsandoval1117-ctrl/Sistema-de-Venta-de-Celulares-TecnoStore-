@@ -14,7 +14,7 @@ public class Main {
         boolean salir = false;
 
         while (!salir) {
-            System.out.println("\n--- SISTEMA TECNOSTORE (TERMINAL) ---");
+            System.out.println("\n--- SISTEMA TECNOSTORE ---");
             System.out.println("1. Filtrar celulares por Marca");
             System.out.println("2. Agregar celular al Carrito");
             System.out.println("3. Finalizar Venta y generar TXT de Resumen");
@@ -49,7 +49,7 @@ public class Main {
                         if (celularEncontrado != null) {
                             controller.agregarAlCarrito(celularEncontrado, cant);
                         } else {
-                            System.out.println("❌ Error: No se encontró ningún celular con el ID especificado.");
+                            System.out.println("Error: No se encontró ningún celular con el ID especificado.");
                         }
                     } catch (Exception e) {
                         System.out.println(e.getMessage());
